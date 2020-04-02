@@ -14,7 +14,7 @@ func main() {
     app.Name = "Website Lookup CLI"
     app.Usage = "Let's you query IPs, CNAMEs, MX records and Name Servers!"
     myFlags := []cli.Flag{
-        cli.StringFlag {
+        cli.StringFlag{
             Name:  "host",
             Value: "tutorialedge.net",
         },
