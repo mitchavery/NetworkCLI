@@ -1,11 +1,12 @@
 package main
 
 import (
-	"log"
-	"net"
-	"os"
+    "fmt"
+    "log"
+    "net"
+    "os"
 
-	"github.com/urfave/cli"
+    "github.com/urfave/cli"
 )
 
 func main() {
@@ -16,7 +17,7 @@ func main() {
     // We'll be using the same flag for all our commands
     // so we'll define it up here
     myFlags := []cli.Flag{
-        cli.StringFlag{
+        cli.StringFlag {
             Name:  "host",
             Value: "tutorialedge.net",
         },
@@ -45,8 +46,10 @@ func main() {
             },
         },
     }
-	err := app.Run(os.Args)
-	if err != nil {
-		log.Fatal(err)
-	}
+
+    // start our application
+    err := app.Run(os.Args)
+    if err != nil {
+        log.Fatal(err)
+    }
 }
